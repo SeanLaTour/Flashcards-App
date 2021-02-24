@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { House } from "react-bootstrap-icons";
 import { readDeck } from "../../utils/api/index.js";
 
 function StudyNav() {
@@ -23,7 +22,7 @@ function StudyNav() {
       <ul className="d-flex flex-direction-row">
         <li className="m-2" style={{ listStyle: "none" }}>
           <Link className="d-flex flex-direction-row" to="/">
-            <House className="m-1" />
+          <span class="oi oi-home"></span>
             Home
           </Link>
         </li>

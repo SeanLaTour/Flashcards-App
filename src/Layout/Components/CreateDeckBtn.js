@@ -1,19 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
-import { PlusSquare } from "react-bootstrap-icons";
 
 function CreateDeckBtn() {
   return (
     <Link to="/decks/new">
-      <Button
+      <button
         variant="secondary"
         size="large"
         className="m-2 d-flex justify-content-center flex-direction-row"
       >
-        <PlusSquare className="m-1" size={20} />
+        <span class="oi oi-plus"></span>
         Create Deck
-      </Button>
+      </button>
     </Link>
   );
 }

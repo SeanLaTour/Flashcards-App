@@ -13,8 +13,9 @@ function DeckCard({ deck, index, handleDeleteDeck }) {
     waitCards();
   }, []);
 
+  if (!deck) return <p>Loading...</p>
   return (
-    <div id={deck.id} className="mt-3 mb-3" key={index}>
+    <div id={deck.id} className="card mt-3 mb-3" key={index}>
         <div className="container">
           <div className="row">
             <div className="col">

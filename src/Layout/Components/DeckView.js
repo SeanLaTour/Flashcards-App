@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useHistory, Link } from "react-router-dom";
-import { Button, Col, Row } from "react-bootstrap";
 import ViewCard from "./ViewCard";
 import { listCards, readDeck } from "../../utils/api/index.js";
-import { Trash, Book } from "react-bootstrap-icons";
 
 function DeckView({ handleDeleteDeck }) {
   const history = useHistory();
@@ -30,25 +28,25 @@ function DeckView({ handleDeleteDeck }) {
     <div>
       <h2>{deck.name}</h2>
       <p>{deck.description}</p>
-      <Row>
-        <Col>
+      <div className="row">
+        <div className="col">
           <Link to={`/decks/${deck.id}/edit`}>
-            <Button className="m-1" variant="secondary">
+            <button className="m-1" variant="secondary">
               Edit
-            </Button>
+            </button>
           </Link>
           <Link to={`/decks/${deck.id}/study`}>
-            <Button className="m-1">
-              <Book />
+            <button className="m-1">
+            <span class="oi oi-book"></span>
               Study
-            </Button>
+            </button>
           </Link>
           <Link to={`/decks/${deck.id}/cards/new`}>
-            <Button className="m-1">Add Cards</Button>
+            <button className="m-1">Add Cards</button>
           </Link>
-        </Col>
-        <Col className="col-1">
-          <Button
+        </div>
+        <div className="col-1">
+          <button
             onClick={() => {
               if (
                 window.confirm(
@@ -62,10 +60,10 @@ function DeckView({ handleDeleteDeck }) {
             className="m-1 text-right"
             variant="danger"
           >
-            <Trash />
-          </Button>
-        </Col>
-      </Row>
+            <span class="oi oi-trash"></span>
+          </button>
+        </div>
+      </div>
       <h1>Cards</h1>
       {listOfCards}
     </div>

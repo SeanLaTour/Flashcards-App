@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Form, Col, Button } from "react-bootstrap";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { readCard, updateCard } from "../../utils/api/index.js";
+import FormComponent from "./FormComponent";
 
 function EditCard() {
   const [card, setCard] = useState();
@@ -24,37 +24,7 @@ function EditCard() {
 
   if (!card) return <p>Loading...</p>;
   return (
-    <div>
-      <Form>
-        <Col>
-          <h1>Edit Card</h1>
-          <Form.Label className="mt-1">Front</Form.Label>
-          <Form.Control
-            className="mt-1"
-            placeholder={card.front}
-            as="textarea"
-            id="front"
-          ></Form.Control>
-          <Form.Label className="mt-1">Back</Form.Label>
-          <Form.Control
-            className="mt-1"
-            placeholder={card.back}
-            as="textarea"
-            id="back"
-          ></Form.Control>
-          <Link to={`/decks/${params.deckId}`}>
-            <Button className="mt-2 mr-1" variant="secondary">
-              Cancel
-            </Button>
-          </Link>
-          <Link to={`/decks/${params.deckId}`}>
-            <Button onClick={() => handleEditCardBtn()} className="mt-2 mr-1">
-              Submit
-            </Button>
-          </Link>
-        </Col>
-      </Form>
-    </div>
+    <FormComponent info={card} edit={true} params={params} handleBtn={handleEditCardBtn} />
   );
 }
 

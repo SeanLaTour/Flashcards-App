@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Form, Col, Button } from "react-bootstrap";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { createCard, readDeck, listCards } from "../../utils/api/index.js";
+import FormComponent from "./FormComponent";
+
 
 function AddCard() {
   const [deck, setDeck] = useState();
@@ -30,41 +31,11 @@ function AddCard() {
     const back = document.getElementById("back").value;
     const obj = { front: front, back: back, id: id, deckId: deck.id };
     await createCard(deck.id, obj);
-    document.getElementById("front").value = '';
-    document.getElementById("back").value = '';
   }
 
   if (!deck) return <p>Loading...</p>;
   return (
-    <div>
-      <Form>
-        <Col>
-          <h1>{deck.name}: Add Card</h1>
-          <Form.Label className="mt-1">Front</Form.Label>
-          <Form.Control
-            className="mt-1"
-            placeholder="Front of card"
-            as="textarea"
-            id="front"
-          ></Form.Control>
-          <Form.Label className="mt-1">Back</Form.Label>
-          <Form.Control
-            className="mt-1"
-            placeholder="Back of card"
-            as="textarea"
-            id="back"
-          ></Form.Control>
-          <Link to={`/decks/${deck.id}`}>
-            <Button className="mt-2 mr-1" variant="secondary">
-              Done
-            </Button>
-          </Link>
-          <Button onClick={() => handleAddCardBtn()} className="mt-2 mr-1">
-            Save
-          </Button>
-        </Col>
-      </Form>
-    </div>
+    <FormComponent info={deck} params={params} handleBtn={handleAddCardBtn} />
   );
 }
 

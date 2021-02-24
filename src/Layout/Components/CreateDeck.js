@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Form, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { createDeck, listDecks } from "../../utils/api/index.js";
 
@@ -31,35 +30,35 @@ function CreateDeck({ loadDecks }) {
 
   return (
     <div>
-      <Form>
-        <Col>
+      <form>
+        <div className="col d-flex flex-column">
           <h1>Create Deck</h1>
-          <Form.Label className="mt-1">Name</Form.Label>
-          <Form.Control
+          <label className="mt-1">Name</label>
+          <input
             className="mt-1"
             placeholder="Deck Name"
             type="text"
             id="deckTitleInput"
-          ></Form.Control>
-          <Form.Label className="mt-1">Description</Form.Label>
-          <Form.Control
+          ></input>
+          <label className="mt-1">Description</label>
+          <input
             className="mt-1"
             placeholder="Brief description of the deck"
             as="textarea"
             id="deckTextInput"
-          ></Form.Control>
+          ></input>
           <Link to="/">
-            <Button className="mt-2 mr-1" variant="secondary">
+            <button className="mt-2 mr-1" variant="secondary">
               Cancel
-            </Button>
+            </button>
           </Link>
           <Link to={`/decks/${id}`}>
-            <Button onClick={() => handleCreateDeckBtn()} className="mt-2 mr-1">
+            <button onClick={() => handleCreateDeckBtn()} className="mt-2 mr-1">
               Submit
-            </Button>
+            </button>
           </Link>
-        </Col>
-      </Form>
+        </div>
+      </form>
     </div>
   );
 }

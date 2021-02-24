@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button, Card, Container, Row, Col } from "react-bootstrap";
-import { Trash } from "react-bootstrap-icons";
 import { deleteCard, listCards } from "../../utils/api";
 
 function ViewCard({ card, setCards }) {
@@ -15,34 +13,34 @@ function ViewCard({ card, setCards }) {
 
   return (
     <div>
-      <Card className="mt-3 mb-3">
-        <Container>
-          <Row>
-            <Col>
-              <Card.Text>{card.front}</Card.Text>
-            </Col>
-            <Col>
-              <Card.Text>{card.back}</Card.Text>
-            </Col>
-          </Row>
-          <Row className="d-flex flex-row-reverse">
-            <Button
+      <div className="card mt-3 mb-3">
+        <container>
+          <div className="row">
+            <div className="col">
+              <label>{card.front}</label>
+            </div>
+            <div className="col">
+              <label>{card.back}</label>
+            </div>
+          </div>
+          <div className="d-flex row flex-row-reverse">
+            <button
               onClick={() => {
                 if (window.confirm("Delete card?")) handleDeleteCard(card);
               }}
               variant="danger"
               className="m-1"
             >
-              <Trash />
-            </Button>
+              <span class="oi oi-trash"></span>
+            </button>
             <Link to={`/decks/${card.deckId}/cards/${card.id}/edit`}>
-              <Button variant="secondary" className="m-1">
+              <button variant="secondary" className="m-1">
                 Edit
-              </Button>
+              </button>
             </Link>
-          </Row>
-        </Container>
-      </Card>
+          </div>
+        </container>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { Card, Button } from "react-bootstrap";
 import { listCards, readDeck } from "../../utils/api/index.js";
 
 function Study({ decks }) {
@@ -36,7 +35,7 @@ function Study({ decks }) {
           {cards.length === 1 ? null : "s"} in this deck.
         </p>
         <Link to={`/decks/${deck.id}/cards/new`}>
-          <Button>Add Cards</Button>
+          <button className="col-2">Add Cards</button>
         </Link>
       </div>
     );
@@ -45,7 +44,8 @@ function Study({ decks }) {
   // Flip the card.
   if (flipped) {
     nextButton = (
-      <Button
+      <div className="d-flex col-1">
+      <button
         onClick={() => {
           if (index < cards.length - 1) {
             setIndex((index) => index + 1);
@@ -60,7 +60,8 @@ function Study({ decks }) {
         className="m-1"
       >
         Next
-      </Button>
+      </button>
+      </div>
     );
     content = cards[index].back;
   } else {
@@ -70,24 +71,24 @@ function Study({ decks }) {
   }
 
   return (
-    <div>
+    <div className="card p-2 d-flex flex-column">
       <h1>Study: {deck.name}</h1>
-      <Card>
-        <Card.Body>
-          <Card.Title>
+      <div>
+        <div className="d-flex flex-column">
+          <h2>
             Card {index + 1} of {cards.length}
-          </Card.Title>
-          <Card.Text>{content}</Card.Text>
-          <Button
+          </h2>
+          <label>{content}</label>
+          <button
             onClick={() => setFlipped(!flipped)}
             variant="secondary"
-            className="m-2"
+            className="m-2 col-1"
           >
             Flip
-          </Button>
+          </button>
           {nextButton}
-        </Card.Body>
-      </Card>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Form, Col, Button } from "react-bootstrap";
 import { Link, useHistory, useParams } from "react-router-dom";
 import { readDeck, updateDeck } from "../../utils/api/index.js";
 
@@ -16,7 +15,8 @@ function EditDeck({ loadDecks }) {
     loadDeck();
   }, []);
 
-  async function handleEditDeck() {
+  async function handleEditDeck(e) {
+    e.preventDefault();
     const newTitle = document.getElementById("deckTitleInput").value;
     const newDescription = document.getElementById("deckTextInput").value;
     const obj = { name: newTitle, description: newDescription, id: deck.id };
@@ -28,31 +28,31 @@ function EditDeck({ loadDecks }) {
   if (!deck) return <p>Loading...</p>;
   return (
     <div>
-      <Form>
-        <Col>
+      <form>
+        <div className="col d-flex flex-column">
           <h1>Edit Deck</h1>
-          <Form.Label className="mt-1">Name</Form.Label>
-          <Form.Control
+          <label className="mt-1">Name</label>
+          <input
             className="mt-1"
             placeholder={deck.name}
             type="text"
             id="deckTitleInput"
-          ></Form.Control>
-          <Form.Label className="mt-1">Description</Form.Label>
-          <Form.Control
+          ></input>
+          <label className="mt-1">Description</label>
+          <input
             className="mt-1"
             placeholder={deck.description}
             as="textarea"
             id="deckTextInput"
-          ></Form.Control>
+          ></input>
           <Link to={`/decks/${deck.id}`}>
-            <Button className="mt-2 mr-1" variant="secondary">
+            <button className="col-2 mt-2 mr-1" variant="secondary">
               Cancel
-            </Button>
+            </button>
           </Link>
-            <Button onClick={() => handleEditDeck()} className="mt-2 mr-1">Submit</Button>
-        </Col>
-      </Form>
+            <button onClick={(e) => handleEditDeck(e)} className="col-2 mt-2 mr-1">Submit</button>
+        </div>
+      </form>
     </div>
   );
 }
