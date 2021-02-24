@@ -1,0 +1,87 @@
+{
+  "decks": [
+    {
+      "name": "Yo ho ho",
+      "description": "And a packet of gum.",
+      "id": 2
+    },
+    {
+      "name": "A deck",
+      "description": "derp de derp de derp",
+      "id": 3
+    },
+    {
+      "name": "Guitars",
+      "description": "Shred",
+      "id": 10
+    }
+  ],
+  "cards": [
+    {
+      "front": "What path will match the follow Route?\n<Route>\n  <NotFound />\n</Route>",
+      "back": "All paths. A route with no path matches all URL's",
+      "deckId": 3,
+      "id": 1
+    },
+    {
+      "front": "What path will match the follow Route?\n<Route>\n  <NotFound />\n</Route>",
+      "back": "All paths. A route with no path matches all URL's",
+      "deckId": 3,
+      "id": 2
+    },
+    {
+      "front": "What path will match the follow Route?\n<Route>\n  <NotFound />\n</Route>",
+      "back": "All paths. A route with no path matches all URL's",
+      "deckId": 3,
+      "id": 3
+    },
+    {
+      "front": "This is new",
+      "back": "as well as this",
+      "id": 4,
+      "deckId": 2
+    },
+    {
+      "front": "Types of guitars",
+      "back": "Fender, Gibson, Ibanez, Taylor",
+      "id": 7,
+      "deckId": 10
+    },
+    {
+      "front": "Neck Lengths",
+      "back": "12, 22, 24 frets",
+      "id": 8,
+      "deckId": 10
+    },
+    {
+      "front": "Types of style",
+      "back": "Electric, Acoustic, Classical",
+      "id": 9,
+      "deckId": 10
+    },
+    {
+      "front": "Front of card",
+      "back": "Back of card",
+      "id": 10,
+      "deckId": 2
+    },
+    {
+      "front": "Pirates",
+      "back": "Ships",
+      "id": 11,
+      "deckId": 2
+    },
+    {
+      "front": "whatever",
+      "back": "whate er",
+      "id": 12,
+      "deckId": 2
+    },
+    {
+      "front": "something",
+      "back": "another sthing",
+      "id": 13,
+      "deckId": 2
+    }
+  ]
+}
