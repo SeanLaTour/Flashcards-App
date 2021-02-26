@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/Flashcards-App/static/js/main.0182461d.chunk.js",
-    "main.js.map": "/Flashcards-App/static/js/main.0182461d.chunk.js.map",
+    "main.js": "/Flashcards-App/static/js/main.a955cb49.chunk.js",
+    "main.js.map": "/Flashcards-App/static/js/main.a955cb49.chunk.js.map",
     "runtime-main.js": "/Flashcards-App/static/js/runtime-main.d4e1dd0f.js",
     "runtime-main.js.map": "/Flashcards-App/static/js/runtime-main.d4e1dd0f.js.map",
     "static/js/2.8bb908e7.chunk.js": "/Flashcards-App/static/js/2.8bb908e7.chunk.js",
     "static/js/2.8bb908e7.chunk.js.map": "/Flashcards-App/static/js/2.8bb908e7.chunk.js.map",
     "index.html": "/Flashcards-App/index.html",
-    "precache-manifest.43b72645fca891dbe8d7f38ee75de459.js": "/Flashcards-App/precache-manifest.43b72645fca891dbe8d7f38ee75de459.js",
+    "precache-manifest.ec83bf9627d40c0345e64a13a2a69dc2.js": "/Flashcards-App/precache-manifest.ec83bf9627d40c0345e64a13a2a69dc2.js",
     "service-worker.js": "/Flashcards-App/service-worker.js",
     "static/js/2.8bb908e7.chunk.js.LICENSE.txt": "/Flashcards-App/static/js/2.8bb908e7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d4e1dd0f.js",
     "static/js/2.8bb908e7.chunk.js",
-    "static/js/main.0182461d.chunk.js"
+    "static/js/main.a955cb49.chunk.js"
   ]
 }
