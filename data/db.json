@@ -71,12 +71,6 @@
       "id": 3
     },
     {
-      "front": "vc",
-      "back": "dsdf",
-      "id": 4,
-      "deckId": 2
-    },
-    {
       "front": "Types of guitars",
       "back": "Fender, Gibson, Ibanez, Taylor",
       "id": 7,
@@ -183,6 +177,12 @@
       "back": "jj",
       "id": 24,
       "deckId": 2
+    },
+    {
+      "front": "a card",
+      "back": "another",
+      "deckId": 2,
+      "id": 25
     }
   ]
 }

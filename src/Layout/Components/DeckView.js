@@ -5,7 +5,6 @@ import { readDeck } from "../../utils/api/index.js";
 
 function DeckView({ handleDeleteDeck }) {
   const history = useHistory();
-  const [cards, setCards] = useState([]);
   const params = useParams();
   const [deck, setDeck] = useState();
 
@@ -35,7 +34,7 @@ function DeckView({ handleDeleteDeck }) {
           </Link>
           <Link to={`/decks/${deck.id}/study`}>
             <button className="m-1">
-            <span class="oi oi-book"></span>
+            <span className="oi oi-book"></span>
               Study
             </button>
           </Link>
