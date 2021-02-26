@@ -22,7 +22,7 @@ function AddCard() {
     e.preventDefault();
     const front = document.getElementById("front").value;
     const back = document.getElementById("back").value;
-    const obj = { front: front, back: back, id: id, deckId: deck.id };
+    const obj = { front: front, back: back, deckId: deck.id };
     await createCard(deck.id, obj);
   }
 
