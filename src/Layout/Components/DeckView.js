@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useHistory, Link } from "react-router-dom";
 import ViewCard from "./ViewCard";
-import { listCards, readDeck } from "../../utils/api/index.js";
+import { readDeck } from "../../utils/api/index.js";
 
 function DeckView({ handleDeleteDeck }) {
   const history = useHistory();

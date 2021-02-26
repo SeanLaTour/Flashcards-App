@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { listCards, readDeck } from "../../utils/api/index.js";
+import { readDeck } from "../../utils/api/index.js";
 
-function Study({ decks }) {
+function Study() {
   const [flipped, setFlipped] = useState(false);
   const [index, setIndex] = useState(0);
   const [deck, setDeck] = useState();

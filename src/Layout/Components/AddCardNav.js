@@ -23,7 +23,7 @@ function AddCardNav() {
         <nav style={{backgroundColor: '#EBEBEB', borderRadius: '5px'}}>
             <ul className="d-flex flex-direction-row">
                 <li className="m-2" style={{listStyle: 'none'}}>
-                    <Link className="d-flex flex-direction-row" to="/"><span class="oi oi-home"></span>Home</Link>
+                    <Link className="d-flex flex-direction-row" to="/"><span className="oi oi-home"></span>Home</Link>
                 </li>
                 <li className="m-2" style={{listStyle: 'none'}}><p>/</p></li>
                 <li className="m-2" style={{listStyle: 'none'}}>

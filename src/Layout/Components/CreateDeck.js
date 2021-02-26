@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link, useHistory } from "react-router-dom";
-import { createDeck, listDecks } from "../../utils/api/index.js";
+import { createDeck } from "../../utils/api/index.js";
 
 function CreateDeck() {
   const history = useHistory();

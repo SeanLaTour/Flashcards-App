@@ -22,7 +22,7 @@ function StudyNav() {
       <ul className="d-flex flex-direction-row">
         <li className="m-2" style={{ listStyle: "none" }}>
           <Link className="d-flex flex-direction-row" to="/">
-          <span class="oi oi-home"></span>
+          <span className="oi oi-home"></span>
             Home
           </Link>
         </li>

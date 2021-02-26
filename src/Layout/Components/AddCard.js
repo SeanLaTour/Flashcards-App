@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { createCard, readDeck, listCards } from "../../utils/api/index.js";
+import { createCard, readDeck } from "../../utils/api/index.js";
 import FormComponent from "./FormComponent";
 
 
 function AddCard() {
   const [deck, setDeck] = useState();
-  const [id, setId] = useState(0);
   const params = useParams();
 
   // Load info and create a new id for the new deck.
