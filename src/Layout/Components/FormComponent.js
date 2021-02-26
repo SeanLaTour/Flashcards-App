@@ -18,7 +18,7 @@ function FormComponent({ info, handleBtn, params, edit }) {
           </button>
         </Link>
         <Link to={`/decks/${params.deckId}`}>
-          <button onClick={() => handleBtn()} className="mt-2 mr-1">
+          <button onClick={(e) => handleBtn(e)} className="mt-2 mr-1">
             Submit
           </button>
         </Link>
@@ -36,8 +36,8 @@ function FormComponent({ info, handleBtn, params, edit }) {
           </button>
         </Link>
         <button
-          onClick={() => {
-            handleBtn();
+          onClick={(e) => {
+            handleBtn(e);
             resestForm();
           }}
           className="mt-2 mr-1"
@@ -55,19 +55,21 @@ function FormComponent({ info, handleBtn, params, edit }) {
         <div className="col">
           <h1>{info.name ? `${info.name}: Add Card` : `Edit Card`}</h1>
           <label className="mt-1">Front</label>
-          <input
+          <textarea
             className="mt-1"
             placeholder="Front of card"
+            value={edit ? info.front : null}
             as="textarea"
             id="front"
-          ></input>
+          ></textarea>
           <label className="mt-1">Back</label>
-          <input
+          <textarea
             className="mt-1"
             placeholder="Back of card"
+            value={edit ? info.back : null}
             as="textarea"
             id="back"
-          ></input>
+          ></textarea>
           {edit ? editBtns() : addBtns()}
         </div>
       </form>

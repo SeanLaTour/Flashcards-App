@@ -13,20 +13,14 @@ function AddCard() {
   useEffect(() => {
     async function loadDeck() {
       const deckData = await readDeck(params.deckId);
-      const cardsData = await listCards();
-      const orderedCardsData = cardsData.map((item) => item.id);
-      const idArray = orderedCardsData.sort((itemA, itemB) =>
-        itemB > itemA ? 1 : -1
-      );
-      const newCardId = idArray[0] + 1;
-      setId((id) => (id += newCardId));
       setDeck(deckData);
     }
     loadDeck();
   }, []);
 
   // Creates a new card with the information that was inputed.
-  async function handleAddCardBtn() {
+  async function handleAddCardBtn(e) {
+    e.preventDefault();
     const front = document.getElementById("front").value;
     const back = document.getElementById("back").value;
     const obj = { front: front, back: back, id: id, deckId: deck.id };

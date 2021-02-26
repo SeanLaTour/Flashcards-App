@@ -5,7 +5,6 @@ import { listCards, readDeck } from "../../utils/api/index.js";
 function Study({ decks }) {
   const [flipped, setFlipped] = useState(false);
   const [index, setIndex] = useState(0);
-  const [cards, setCards] = useState([]);
   const [deck, setDeck] = useState();
   let content, nextButton;
 
@@ -15,24 +14,22 @@ function Study({ decks }) {
     async function loadInfo() {
       const deckData = await readDeck(params.deckId);
       setDeck(deckData);
-      const cardData = await listCards(params.deckId);
-      setCards(cardData);
     }
     loadInfo();
   }, []);
 
   // Test to be sure cards and deck are present.
-  if (!deck || cards == []) {
+  if (!deck) {
     return <h4>Loading...</h4>;
-  } else if (cards.length <= 2) {
+  } else if (deck.cards.length <= 2) {
     return (
       <div>
         <h3>Not enough cards.</h3>
         <p>
           {" "}
           You need at least 3 cards to study. There{" "}
-          {cards.length === 1 ? "is" : "are"} only {cards.length} card
-          {cards.length === 1 ? null : "s"} in this deck.
+          {deck.cards.length === 1 ? "is" : "are"} only {deck.cards.length} card
+          {deck.cards.length === 1 ? null : "s"} in this deck.
         </p>
         <Link to={`/decks/${deck.id}/cards/new`}>
           <button className="col-2">Add Cards</button>
@@ -47,7 +44,7 @@ function Study({ decks }) {
       <div className="d-flex col-1">
       <button
         onClick={() => {
-          if (index < cards.length - 1) {
+          if (index < deck.cards.length - 1) {
             setIndex((index) => index + 1);
             setFlipped(!flipped);
           } else {
@@ -63,10 +60,9 @@ function Study({ decks }) {
       </button>
       </div>
     );
-    content = cards[index].back;
+    content = deck.cards[index].back;
   } else {
-    console.log("cards: ", cards)
-    content = cards[index].front;
+    content = deck.cards[index].front;
     nextButton = null;
   }
 
@@ -76,7 +72,7 @@ function Study({ decks }) {
       <div>
         <div className="d-flex flex-column">
           <h2>
-            Card {index + 1} of {cards.length}
+            Card {index + 1} of {deck.cards.length}
           </h2>
           <label>{content}</label>
           <button

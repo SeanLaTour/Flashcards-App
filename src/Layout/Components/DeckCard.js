@@ -3,15 +3,6 @@ import { Link } from "react-router-dom";
 import { listCards } from "../../utils/api/index.js";
 
 function DeckCard({ deck, index, handleDeleteDeck }) {
-  const [count, setCount] = useState(0);
-  
-  useEffect(() => {
-    async function waitCards() {
-      const cards = await listCards(deck.id);
-      setCount(cards.length);
-    }
-    waitCards();
-  }, []);
 
   if (!deck) return <p>Loading...</p>
   return (
@@ -22,7 +13,7 @@ function DeckCard({ deck, index, handleDeleteDeck }) {
               <h2>{deck.name}</h2>
             </div>
             <div className="col">
-              <p className="text-right">{count} cards</p>
+              <p className="text-right">{deck.cards.length} cards</p>
             </div>
           </div>
         </div>

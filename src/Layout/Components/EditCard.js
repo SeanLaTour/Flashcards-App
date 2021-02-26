@@ -15,7 +15,8 @@ function EditCard() {
     loadCard();
   }, []);
 
-  async function handleEditCardBtn() {
+  async function handleEditCardBtn(e) {
+    e.preventDefault();
     const front = document.getElementById("front").value;
     const back = document.getElementById("back").value;
     const obj = { front: front, back: back, id: card.id, deckId: card.deckId };

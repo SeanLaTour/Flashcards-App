@@ -34,23 +34,28 @@ function EditDeck({ loadDecks }) {
           <label className="mt-1">Name</label>
           <input
             className="mt-1"
-            placeholder={deck.name}
+            value={deck.name}
             type="text"
             id="deckTitleInput"
           ></input>
           <label className="mt-1">Description</label>
-          <input
+          <textarea
             className="mt-1"
-            placeholder={deck.description}
+            value={deck.description}
             as="textarea"
             id="deckTextInput"
-          ></input>
+          ></textarea>
           <Link to={`/decks/${deck.id}`}>
             <button className="col-2 mt-2 mr-1" variant="secondary">
               Cancel
             </button>
           </Link>
-            <button onClick={(e) => handleEditDeck(e)} className="col-2 mt-2 mr-1">Submit</button>
+          <button
+            onClick={(e) => handleEditDeck(e)}
+            className="col-2 mt-2 mr-1"
+          >
+            Submit
+          </button>
         </div>
       </form>
     </div>

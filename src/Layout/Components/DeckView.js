@@ -13,14 +13,12 @@ function DeckView({ handleDeleteDeck }) {
     async function loadInfo() {
       const deckData = await readDeck(params.deckId);
       setDeck(deckData);
-      const cardData = await listCards(params.deckId);
-      setCards(cardData);
     }
     loadInfo();
   }, []);
 
   if (!deck) return <p>loading...</p>;
-  const listOfCards = cards.map((card) => {
+  const listOfCards = deck.cards.map((card) => {
     return <ViewCard setCards={setCards} card={card} />;
   });
 
