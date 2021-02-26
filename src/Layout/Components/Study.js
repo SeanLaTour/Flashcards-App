@@ -72,7 +72,7 @@ function Study({ decks }) {
   return (
     <div>
       <h1>Study: {deck.name}</h1>
-      <Card>
+      <Card className="mb-2">
         <Card.Body>
           <Card.Title>
             Card {index + 1} of {cards.length}
