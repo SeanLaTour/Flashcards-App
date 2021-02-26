@@ -6,18 +6,20 @@ import { readDeck } from "../../utils/api/index.js";
 function DeckView({ handleDeleteDeck }) {
   const history = useHistory();
   const params = useParams();
+  const [cards, setCards] = useState();
   const [deck, setDeck] = useState();
 
   useEffect(() => {
     async function loadInfo() {
       const deckData = await readDeck(params.deckId);
+      setCards(deckData.cards)
       setDeck(deckData);
     }
     loadInfo();
   }, []);
 
   if (!deck) return <p>loading...</p>;
-  const listOfCards = deck.cards.map((card) => {
+  const listOfCards = cards.map((card) => {
     return <ViewCard setCards={setCards} card={card} />;
   });
 
