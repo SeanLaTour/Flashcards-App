@@ -26,13 +26,13 @@ function DeckCard({ deck, index, handleDeleteDeck }) {
           <div className="col">
             <Link to={`/decks/${deck.id}`}>
               <button variant="secondary" className="m-1">
-              <span class="oi oi-eye"></span>
+              <span className="oi oi-eye"></span>
                 View
               </button>
             </Link>
             <Link to={`/decks/${deck.id}/study`}>
               <button onClick={() => listCards(deck.id)}>
-              <span class="oi oi-book"></span>
+              <span className="oi oi-book"></span>
                 Study
               </button>
             </Link>
@@ -50,7 +50,7 @@ function DeckCard({ deck, index, handleDeleteDeck }) {
                   handleDeleteDeck(deck.id);
               }}
             >
-              <span class="oi oi-trash"></span>
+              <span className="oi oi-trash"></span>
             </button>
           </div>
         </div>

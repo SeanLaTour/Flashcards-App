@@ -16,7 +16,7 @@ function EditCardNav() {
       }
     }
     loadInfo();
-  }, []);
+  }, [params.deckId]);
 
   if (!deck) return <p>loading...</p>;
   return (

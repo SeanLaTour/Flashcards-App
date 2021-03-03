@@ -16,7 +16,7 @@ function Study() {
       setDeck(deckData);
     }
     loadInfo();
-  }, []);
+  }, [params.deckId]);
 
   // Test to be sure cards and deck are present.
   if (!deck) {

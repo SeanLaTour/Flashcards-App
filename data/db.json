@@ -1,182 +1,44 @@
 {
   "decks": [
     {
-      "name": "Yo ho ho",
-      "description": "go fast",
+      "name": "Stuffsd",
+      "description": "fsdfdsd",
+      "id": 1
+    },
+    {
+      "name": "Deck",
+      "description": "Descr",
       "id": 2
     },
     {
-      "name": "A deck",
-      "description": "derp de derp de derp",
+      "name": "Yo ho ho",
+      "description": "dfssdfdsf",
       "id": 3
     },
     {
       "name": "Guitars",
-      "description": "Shred",
-      "id": 10
-    },
-    {
-      "name": "Cars",
-      "description": "go fast",
-      "id": 11
-    },
-    {
-      "name": "Food",
-      "description": "Types of food",
-      "id": 12
-    },
-    {
-      "name": "VRMMMMM",
-      "description": "PFpfpfp",
-      "id": 13
-    },
-    {
-      "name": "Stuff",
-      "description": "sdfsdfsdfsdf",
-      "id": 14
-    },
-    {
-      "name": "Cars",
-      "description": "Stuff",
-      "id": 15
-    },
-    {
-      "name": "Cars1",
-      "description": "Stuff2323",
-      "id": 16
-    },
-    {
-      "name": "Stuff",
-      "description": "cxc",
-      "id": 17
+      "description": "sssseeee",
+      "id": 4
     }
   ],
   "cards": [
     {
-      "front": "What path will match the follow Route?\n<Route>\n  <NotFound />\n</Route>",
-      "back": "All paths. A route with no path matches all URL's",
-      "deckId": 3,
-      "id": 1
+      "front": "asa",
+      "back": "fdfdsf",
+      "id": 1,
+      "deckId": 1
     },
     {
-      "front": "What path will match the follow Route?\n<Route>\n  <NotFound />\n</Route>",
-      "back": "All paths. A route with no path matches all URL's",
-      "deckId": 3,
-      "id": 2
+      "front": "dfsffff",
+      "back": "sdfeeee",
+      "id": 2,
+      "deckId": 1
     },
     {
-      "front": "What path will match the follow Route?\n<Route>\n  <NotFound />\n</Route>",
-      "back": "All paths. A route with no path matches all URL's",
-      "deckId": 3,
+      "front": "front",
+      "back": "back",
+      "deckId": 1,
       "id": 3
-    },
-    {
-      "front": "Types of guitars",
-      "back": "Fender, Gibson, Ibanez, Taylor",
-      "id": 7,
-      "deckId": 10
-    },
-    {
-      "front": "Neck Lengths",
-      "back": "12, 22, 24 frets",
-      "id": 8,
-      "deckId": 10
-    },
-    {
-      "front": "Types of style",
-      "back": "Electric, Acoustic, Classical",
-      "id": 9,
-      "deckId": 10
-    },
-    {
-      "front": "Front of card",
-      "back": "Back of card",
-      "id": 10,
-      "deckId": 2
-    },
-    {
-      "front": "Pirates",
-      "back": "Ships",
-      "id": 11,
-      "deckId": 2
-    },
-    {
-      "front": "something",
-      "back": "another sthing",
-      "id": 13,
-      "deckId": 2
-    },
-    {
-      "front": "asdf",
-      "back": "sfd",
-      "id": 14,
-      "deckId": 2
-    },
-    {
-      "front": "duh",
-      "back": "doi",
-      "id": 15,
-      "deckId": 2
-    },
-    {
-      "front": "blah",
-      "back": "blahs",
-      "id": 16,
-      "deckId": 2
-    },
-    {
-      "front": "youosdf",
-      "back": "sssssssssssssss",
-      "id": 17,
-      "deckId": 2
-    },
-    {
-      "front": "asd",
-      "back": "fdsa",
-      "id": 18,
-      "deckId": 2
-    },
-    {
-      "front": "add a card",
-      "back": "or not",
-      "id": 19,
-      "deckId": 2
-    },
-    {
-      "front": "a",
-      "back": "b",
-      "id": 20,
-      "deckId": 2
-    },
-    {
-      "front": "f",
-      "back": "e",
-      "id": 21,
-      "deckId": 2
-    },
-    {
-      "front": "fd",
-      "back": "sd",
-      "id": 22,
-      "deckId": 2
-    },
-    {
-      "front": "asd",
-      "back": "fefefefe",
-      "id": 23,
-      "deckId": 2
-    },
-    {
-      "front": "j",
-      "back": "jj",
-      "id": 24,
-      "deckId": 2
-    },
-    {
-      "front": "a card",
-      "back": "another",
-      "deckId": 2,
-      "id": 25
     }
   ]
 }

@@ -15,7 +15,7 @@ function AddCard() {
       setDeck(deckData);
     }
     loadDeck();
-  }, []);
+  }, [params.deckId]);
 
   // Creates a new card with the information that was inputed.
   async function handleAddCardBtn(e) {

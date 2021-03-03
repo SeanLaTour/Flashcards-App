@@ -16,7 +16,7 @@ function DeckView({ handleDeleteDeck }) {
       setDeck(deckData);
     }
     loadInfo();
-  }, []);
+  }, [params.deckId]);
 
   if (!deck) return <p>loading...</p>;
   const listOfCards = cards.map((card) => {

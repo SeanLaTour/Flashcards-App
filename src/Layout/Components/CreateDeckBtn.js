@@ -9,7 +9,7 @@ function CreateDeckBtn() {
         size="large"
         className="m-2 d-flex justify-content-center flex-direction-row"
       >
-        <span class="oi oi-plus"></span>
+        <span className="oi oi-plus"></span>
         Create Deck
       </button>
     </Link>

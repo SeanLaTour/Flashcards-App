@@ -16,7 +16,7 @@ function EditDeckNav() {
         }
       }
       loadInfo();
-    }, []);
+    }, [params.deckId]);
 
     if (!deck) return <p>Loading...</p>
     return(

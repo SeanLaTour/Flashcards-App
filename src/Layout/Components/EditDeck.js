@@ -6,6 +6,8 @@ function EditDeck({ loadDecks }) {
   const history = useHistory();
   const params = useParams();
   const [deck, setDeck] = useState();
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
 
   useEffect(() => {
     async function loadDeck() {
@@ -13,7 +15,7 @@ function EditDeck({ loadDecks }) {
       setDeck(deckData);
     }
     loadDeck();
-  }, []);
+  }, [params.deckId]);
 
   async function handleEditDeck(e) {
     e.preventDefault();
@@ -33,15 +35,17 @@ function EditDeck({ loadDecks }) {
           <h1>Edit Deck</h1>
           <label className="mt-1">Name</label>
           <input
+            onChange={(e) => setTitle(e.target.value)}
             className="mt-1"
-            value={deck.name}
+            defaultValue={deck.name}
             type="text"
             id="deckTitleInput"
           ></input>
           <label className="mt-1">Description</label>
           <textarea
+            onChange={(e) => setDescription(e.target.value)}
             className="mt-1"
-            value={deck.description}
+            defaultValue={deck.description}
             as="textarea"
             id="deckTextInput"
           ></textarea>

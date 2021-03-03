@@ -16,7 +16,7 @@ function DeckViewNav() {
       }
     }
     loadInfo();
-  }, []);
+  }, [params.deckId]);
 
   if (!deck) return <p>loading...</p>;
   return (

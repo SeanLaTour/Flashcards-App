@@ -12,7 +12,7 @@ function StudyNav() {
       setDeck(deckData);
     }
     loadInfo();
-  }, []);
+  }, [params.deckId]);
 
   if (!deck) {
     return <h4>Loading...</h4>;
