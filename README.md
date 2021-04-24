@@ -3,8 +3,8 @@
 ### Flash it allows a user to create and customize an unlimited number of decks and cards to help with studying. ###
 ### It allows for the following functionality: ###
 
-Create Deck \n
-Edit Deck
+- Create Deck
+- Edit Deck
 Create Card for Deck
 Edit Card
 Delete Deck
