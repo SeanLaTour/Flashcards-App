@@ -1,7 +1,7 @@
 # Flash-It #
 
-### Flash it allows a user to create and customize an unlimited number of decks and cards to help with studying.
-It allows for the following functionality: ###
+### Flash it allows a user to create and customize an unlimited number of decks and cards to help with studying. ###
+### It allows for the following functionality: ###
 
 Create Deck
 Edit Deck
