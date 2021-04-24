@@ -1,0 +1,29 @@
+{
+  "decks": [
+    {
+      "name": "Introduction Deck",
+      "description": "Welcome to 'Flash-It!', the best app to create and customize your own flashcards! Go ahead and click study if you're ready to begin! Or perhaps you'd like to create your own deck? Click the 'Create Deck' button above to create your own! If you want to view and edit this deck click the view button below. Enjoy and happy studying!",
+      "id": 1
+    }
+  ],
+  "cards": [
+    {
+      "front": "Front of card one",
+      "back": "Back of card one",
+      "id": 1,
+      "deckId": 1
+    },
+    {
+      "front": "Front of card two",
+      "back": "Back of card two",
+      "id": 2,
+      "deckId": 1
+    },
+    {
+      "front": "Front of card three",
+      "back": "Back of card three",
+      "id": 3,
+      "deckId": 1
+    }
+  ]
+}
